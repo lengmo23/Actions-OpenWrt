@@ -12,7 +12,7 @@ name: Build OpenWrt_main
 
 on:
 schedule:   
-    - cron: '0 0 */3 * *'   #国际标准时间，北京时间+8，即下午1点钟
+    - cron: '0 0 */3 * *'
 
 env:
   REPO_URL: https://github.com/lengmo23/openwrt
@@ -155,6 +155,7 @@ jobs:
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
+        echo "Openwrt 23.05 R3G firewall4 Fullcone nat" >> release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
