@@ -11,13 +11,8 @@
 name: Build OpenWrt_main
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+schedule:   
+    - cron: '0 0 */3 * *'   #国际标准时间，北京时间+8，即下午1点钟
 
 env:
   REPO_URL: https://github.com/lengmo23/openwrt
