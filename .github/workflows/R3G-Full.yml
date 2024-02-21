@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Openwrt-23.05 R3G 自动编译
+name: Openwrt-23.05 R3G-Full
 
 
 on:
