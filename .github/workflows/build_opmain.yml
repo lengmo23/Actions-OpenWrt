@@ -14,8 +14,8 @@ name: Openwrt-23.05 R3G 自动编译
 on:
   repository_dispatch:
   workflow_dispatch:
-   schedule:
-     - cron: 0 17 * * *
+   #schedule:
+    # - cron: 0 17 * * *
   # watch:
   #   types: started
 
