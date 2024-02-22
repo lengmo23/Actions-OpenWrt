@@ -159,7 +159,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M-Median")"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M-Immortal")"
         touch release.txt
         echo "Openwrt 23.05.2 R3G-Immortal" >> release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
