@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Immortal R3G
+name: Immortal-master R3G
 
 
 on:
